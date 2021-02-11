@@ -1,28 +1,54 @@
-/* *{
-    margin: 0px;
-    padding: 0px;
-} */
-div{
-    background-color: teal;
-    color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 16px;
-}
-div:hover{
-    background-color: red;
-}
-.box{
+#box{
     width: 150px;
     height: 150px;
-    margin: 5px;
+    overflow-y: scroll;
 }
-#item, p{
-    color: brown;
+body{
+    background-color: teal;
 }
-div p{
-    background-color: yellowgreen;
+#first, #second, #third{
+   border-width: 20px;
+   border-style: solid;
+   border-color: red;
+   width: 150px;
+   height: 150px;
+   margin: 5px;
+}
+#second{
+    border-color: rgb(251, 255, 0) orange green rgb(17, 0, 255);
+    border-radius: 50%;
+}
+#third{
+    border-color: rgb(251, 255, 0) transparent green rgb(17, 0, 255);
+    width: 1px;
+    height: 1px;
+}
+a[href] {
+    background-color: rgb(133, 255, 109);
+}
+a[target=_blank] {
+    background-color: rgb(243, 144, 144);
+}
+a[href$=".pdf"] {
+    background-color: rgb(243, 144, 144);
+}
+a:hover {
+    background-color: crimson;
+}
+h1::after{
+    content: " - Hello world!!!";
+}
+h1::first-letter{
     color: blue;
 }
-span{
-    background-color: darkred;
+nav ul{
+    list-style: none;
+    background-color: khaki;
+}
+ul li{
+    display: inline-block;
+    border: 1 px solid grey;
+    width: 100px;
+    height: 20px;
+    margin: 5px;
 }
