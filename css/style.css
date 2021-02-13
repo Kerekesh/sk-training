@@ -1,0 +1,28 @@
+.text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.text::before, .text::after {
+    content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.";
+    font-size: 1.5em;
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-weight: bold;
+}
+li {
+    list-style-type: square;
+    font-family: sans-serif;
+    margin: 5px;
+}
+ul li:first-child {
+    color: rgb(255, 0, 157);
+    font-weight: bold;
+}
+ul li:nth-child(5) {
+    color: greenyellow;
+    font-style: italic;
+}
