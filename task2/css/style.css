@@ -1,0 +1,20 @@
+.socials {
+    display: flex;
+}
+.fab {
+    font-size: 75px;
+    color: grey;
+    margin: 15px;
+}
+.fa-facebook:hover {
+    color: #385898;
+}
+.fa-youtube:hover {
+    color: #c00;
+}
+.fa-instagram:hover {
+    color: #fb3958;
+}
+.fa-pinterest:hover {
+    color: #e60023;
+}

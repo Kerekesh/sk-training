@@ -1,0 +1,10 @@
+.text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: normal;
+    line-height: 1.4em;
+    letter-spacing: 0.05em;
+    text-align: justify;
+    color: green;
+    padding: 10px;
+}
