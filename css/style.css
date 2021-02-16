@@ -1,0 +1,20 @@
+:root {
+    --size-div: 600px;
+}
+
+div {
+    background-color: brown;
+    width: var(--size-div);
+    overflow: visible;
+}
+div img {
+    width: var(--size-div);
+    height: 240px;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+    div {
+        background-color: chartreuse;
+    }
+}
