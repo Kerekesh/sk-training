@@ -1,6 +1,7 @@
 h1 {
     font-family: sans-serif;
     font-weight: bold;
+    font-size: 2em;
 }
 li {
     list-style-type: square;
