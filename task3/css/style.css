@@ -1,0 +1,41 @@
+div {
+    display: inline-block;
+}
+div.container {
+    margin: 15px;
+}
+div.container div {
+    border-style: solid;
+}
+.top {
+    border-width: 0 60px 100px 60px;
+    border-color: transparent transparent red transparent;
+}
+.bottom {
+    border-width: 100px 60px 0 60px;
+    border-color: red transparent transparent transparent;
+}
+.right {
+    border-width: 60px 0 60px 100px;
+    border-color: transparent transparent transparent greenyellow;
+}
+.left {
+    border-width: 60px 100px 60px 0;
+    border-color: transparent greenyellow transparent transparent;
+}
+.left-bottom {
+    border-width: 70px;
+    border-color: transparent transparent yellow yellow;
+}
+.right-bottom {
+    border-width: 70px;
+    border-color: transparent yellow yellow transparent;
+}
+.left-top {
+    border-width: 70px;
+    border-color: blue transparent transparent blue;
+}
+.right-top {
+    border-width: 70px;
+    border-color: blue blue transparent transparent;
+}
