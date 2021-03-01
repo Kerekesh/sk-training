@@ -1,0 +1,58 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4em 1.5em;
+    grid-auto-rows: minmax(184px, 184px);
+    padding: 2em 3em 4.25em;
+    background: #F6F7FA;
+    font-family: 'Open Sans', sans-serif;
+}
+.dark, .light {
+    background: black;
+    border-radius: 1em;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 3fr 2fr;
+}
+.dark {
+    background: linear-gradient(90.02deg, #25335A 0.02%, #141824 113.01%);
+    color: #FFFFFF;
+}
+.light {
+    background: #FFFFFF;
+}
+.dark>.text, .light>.text {
+    font-size: 24px;
+    line-height: 33px;
+    margin-left: 40px;
+}
+.dark>.time, .light>.time {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    margin-left: 40px;
+}
+.light>.text {
+    color: #B65741;
+}
+.light>.time {
+    color: #AD4328;
+}
+.text {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: flex-end;
+}
+.time {
+    grid-column: 1;
+    grid-row: 2;
+}
+.img {
+    grid-row: 1/3;
+    justify-self: center;
+    align-self: flex-start;
+}
+.light-basketball-player {
+    width: 267px;
+    height: 200px;
+}
