@@ -71,7 +71,6 @@ body {
 .img-block {
     position: relative;
     max-width: 100%;
-    flex-wrap: wrap;
 }
 .item:first-child, .item:nth-child(2) {
     margin-right: 2em;
@@ -188,11 +187,33 @@ body {
 .clients {
     margin-top: 77px;
     margin-bottom: 140px;
-    
+    align-items: center;
 }
-.clients .xiaomi {
-    mask-image: url(../img/xiaomi.svg);
-    
+.clients-links {
+    text-decoration: none;
+}
+.icofont {
+    color: #000000;
+    opacity: 0.15;
+    transition: 0.5s;
+}
+.icofont:hover {
+    opacity: 1;
+}
+.icofont-brand-xiaomi {
+    font-size: 80px;
+}
+.icofont-tinder {
+    font-size: 69px;
+}
+.icofont-brand-apple {
+    font-size: 68px;
+}
+.icofont-brand-nike {
+    font-size: 145px;
+}
+.icofont-brand-amd {
+    font-size: 60px;
 }
 
 .footer {
@@ -227,7 +248,13 @@ body {
     background-color: #C6B393;
     border: none;
     margin-left: 15px;
+    transition: 0.5s;
+    cursor: pointer;
 }
+.submit:hover {
+    background-color: #EF8E70;
+}
+
 .second-nav {
     border-top: 1px solid #fff;
     opacity: 0.2;
@@ -236,6 +263,16 @@ body {
 .second-nav-menu {
     width: 356px;
 }
+.link {
+    transition: 0.5s;
+}
+.link:hover {
+    color: #000;
+}
 .footer-socials .fab {
     color: #fff;
+    transition: 0.5s;
+}
+.footer-socials .fab:hover {
+    color: #000;
 }
