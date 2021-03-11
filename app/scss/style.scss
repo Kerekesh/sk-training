@@ -1,17 +1,8 @@
-@function setColor($clr){
-    @return $clr;
-}
-
-div {
-    background-color:setColor(grey) ;
-    color: green;
-}
-
 .box {
-    background-color: yellow;
-    // my description
+    background-color: aquamarine;
+    height: 130px;
+    border: 1px solid gray;
 }
-
-@for $i from 1 through 12 {
-    .col-lg-#{$i} { width: $i;}
+.item {
+    border: 4px solid yellow !important;
 }
