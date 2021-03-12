@@ -53,6 +53,7 @@ function cleandist() {
 function buildcopy(){
     return src([
         'app/images/dest/**/*',
+        'app/fonts/**/*',
         'app/css/*.min.css',
         'app/**/*.html',
     ], { base: 'app' })

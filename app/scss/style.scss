@@ -1,17 +1,49 @@
-@function setColor($clr){
-    @return $clr;
+$font-m: 'Montserrat', sans-serif;
+$font-n: 'Nunito Sans', sans-serif;
+$tiffany: #10c9c3; //main blue color in the page
+
+@mixin heading1 { //styles for H1
+    font-family: $font-m;
+    font-size: 38px;
+    color: #1d1d1d;
+}
+@mixin heading2 { //styles for H2
+    font-family: $font-m;
+    font-size: 30px;
+    color: #191919;
+}
+@mixin heading3 { //styles for H3 and nav-menu text
+    font-family: $font-m;
+    font-size: 12px;
+    color: #191919;
+    text-transform: uppercase;
+}
+@mixin paragraph1 { //styles for p 18px
+    font-family: $font-n;
+    font-size: 18px;
+    color: #787878;
+}
+@mixin paragraph2 { //styles for p 16px
+    font-family: $font-n;
+    font-size: 16px;
+    color: #787878;
+}
+@mixin paragraph3 {
+    
+}
+@mixin btn {
+    width: 180px;
+    height: 54px;
+    line-height: 54px;
+    text-align: center;
+    border: none;
+    background-color: $tiffany;
+    color: #ffffff;
+    font-family: $font-m;
+    font-size: 12px;
 }
 
-div {
-    background-color:setColor(grey) ;
-    color: green;
-}
-
-.box {
-    background-color: yellow;
-    // my description
-}
-
-@for $i from 1 through 12 {
-    .col-lg-#{$i} { width: $i;}
+.nav-link {
+    color: black;
+    font-family: $font-m;
 }
