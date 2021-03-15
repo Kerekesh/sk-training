@@ -6,6 +6,7 @@ $tiffany: #10c9c3; //main blue color in the page
     font-family: $font-m;
     font-size: 38px;
     color: #1d1d1d;
+    font-weight: bold;
 }
 @mixin heading2 { //styles for H2
     font-family: $font-m;
@@ -17,6 +18,7 @@ $tiffany: #10c9c3; //main blue color in the page
     font-size: 12px;
     color: #191919;
     text-transform: uppercase;
+    font-weight: bold;
 }
 @mixin paragraph1 { //styles for p 18px
     font-family: $font-n;
@@ -27,6 +29,7 @@ $tiffany: #10c9c3; //main blue color in the page
     font-family: $font-n;
     font-size: 16px;
     color: #787878;
+    text-align: center;
 }
 @mixin paragraph3 {
     
@@ -34,7 +37,6 @@ $tiffany: #10c9c3; //main blue color in the page
 @mixin btn {
     width: 180px;
     height: 54px;
-    line-height: 54px;
     text-align: center;
     border: none;
     background-color: $tiffany;
@@ -43,7 +45,39 @@ $tiffany: #10c9c3; //main blue color in the page
     font-size: 12px;
 }
 
-.nav-link {
-    color: black;
-    font-family: $font-m;
+.header {
+    height: 100vh;
+    background-color: #e9e9e9;
+    padding-top: 38px;
+    
+    .nav-link {
+    @include heading3;
+    font-family: $font-m;    
+        &:hover {
+            color: $tiffany;
+        }
+    }
+    .header-title-row {
+        height: calc(100vh - 72px);
+        .heading1 {
+            @include heading1;
+        }
+        .paragraph1 {
+            @include paragraph1;
+            margin: 40px 0;
+        }
+        .btn {
+            @include heading3;
+            @include btn;
+            font-weight: normal;
+        }
+    }
 }
+.first-section {
+    padding: 100px 0;
+    .paragraph2 {
+        @include paragraph2;
+        margin: 40px 0;
+    }
+}
+
