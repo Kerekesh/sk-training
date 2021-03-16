@@ -54,6 +54,7 @@ function buildcopy(){
     return src([
         'app/images/dest/**/*',
         'app/fonts/**/*',
+        'app/pages/**/*',
         'app/css/*.min.css',
         'app/**/*.html',
     ], { base: 'app' })
