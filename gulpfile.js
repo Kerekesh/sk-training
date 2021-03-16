@@ -16,7 +16,7 @@ const del = require('del');
 
 function browsersync() {
         browserSync.init({ 
-            server: { baseDir: 'app/' }, 
+            server: { baseDir: 'app/'}, 
             notify: false, 
             online: true 
         })
@@ -54,7 +54,6 @@ function buildcopy(){
     return src([
         'app/images/dest/**/*',
         'app/fonts/**/*',
-        'app/pe-icon-7-stroke/**/*',
         'app/css/*.min.css',
         'app/**/*.html',
     ], { base: 'app' })
