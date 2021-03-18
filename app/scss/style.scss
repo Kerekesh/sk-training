@@ -348,18 +348,19 @@ $signal-black: #252525;
         margin-top: 38px;
         font-weight: normal;
     }
-    .s-dot {
+    .dot {
         width: 6px;
         height: 6px;
         border-radius: 50%;
         background-color: #b0e8e6;
     }
-    .a-dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #fff;
-        margin: 0 8px;
+    .carousel-indicators {
+        .active {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #fff;
+    }
     }
     .pagination {
         position: absolute;
