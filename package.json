@@ -23,5 +23,8 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-newer": "^1.4.0",
     "gulp-sass": "^4.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0"
   }
 }
