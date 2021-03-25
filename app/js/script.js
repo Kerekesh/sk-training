@@ -54,12 +54,22 @@
 // new Number();
 // console.log(Number(false)); //преобразует Булевое значение
 
-let random = (min, max) => Math.floor(Math.random() * (max - min + 1) ) + min; //Формула случайного целого числа
 
-let rnd = random(1, 1000);
+// let getRandomRange = (min, max) => Math.round(Math.random() * (max - min + 1)) + min, //Формула случайного целого числа
+//     randomNumber = getRandomRange(1, 100),
+//     checkNumber = (() => (randomNumber % 2) ?
+//         console.log('Нечетное' + ' (' + randomNumber + ')') :
+//         console.log('Четное' + ' (' + randomNumber + ')'))();
 
-if (rnd % 2) {
-    console.log('Четное');
-} else {
-    console.log('Нечетное');
-}
+
+
+// let elem = document.getElementById("elem");
+// let int = setInterval(function(){
+//     let myDate = new Date();
+//     elem.innerHTML = myDate;
+// },1000);
+
+
+let str = "lorem ipsum is simply dummy";
+console.log(str.replace(str, "Lorem Ipsum Is Simply Dummy"));
+
