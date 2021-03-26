@@ -39,25 +39,36 @@
 // console.log(str.replace("locate","loc")) // 
 
 
-let str = "lorem ipsum is simply dummy",
-    string = str[0].toUpperCase() + str.substring(1), // "Lorem ipsum is simply dummy"
-    flag = false,
-    result = "";
+// let str = "lorem ipsum is simply dummy",
+//     string = str[0].toUpperCase() + str.substring(1), // "Lorem ipsum is simply dummy"
+//     flag = false,
+//     result = "";
     
-for (let i = 0; i < string.length; i++) {
-    if (string[i] == " ") {
-        // console.log(" ")
-        result += " ";
-        flag = true;
-    } else {
-        if (flag == true){
-            // console.log(string[i].toUpperCase());
-            flag = false;
-            result += string[i].toUpperCase();
-        } else {
-            // console.log(string[i]);
-            result += string[i];
-        }
-    }
-}
-console.log(result);
+// for (let i = 0; i < string.length; i++) {
+//     if (string[i] == " ") {
+//         // console.log(" ")
+//         result += " "; //Пробелы
+//         flag = true;
+//     } else {
+//         if (flag == true){
+//             // console.log(string[i].toUpperCase());
+//             flag = false;
+//             result += string[i].toUpperCase(); //Заглавные буквы
+//         } else {
+//             // console.log(string[i]);
+//             result += string[i];  //Строчные буквы
+//         }
+//     }
+// }
+// console.log(result);
+
+// let getLongerString = function (firstString, secondString) { //Функция, которая возвращает строку, которая длинее
+//     if (firstString.length > secondString.length) {
+//         return firstString;
+//     } else {
+//         return secondString;
+//     }
+// } 
+
+let getLongerString = (firstString, secondString) => firstString.length > secondString.length ? firstString : secondString;
+console.log(getLongerString("Hi", "Hello"));
