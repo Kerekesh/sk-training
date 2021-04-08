@@ -1,13 +1,13 @@
-let animal = {
-    eats: true,
-    sleep: true
-};
-let rabbit = {
-    jumps: true,
-    eats: false
-};
-rabbit.__proto__ = animal;
-console.log(rabbit.eats); // false, взято з rabbit
+// let animal = {
+//     eats: true,
+//     sleep: true
+// };
+// let rabbit = {
+//     jumps: true,
+//     eats: false
+// };
+// rabbit.__proto__ = animal;
+// console.log(rabbit.eats); // false, взято з rabbit
 
 // let skill = { // Написать метод который вернет строку вида "html - 5"
 //     name: 'html',
