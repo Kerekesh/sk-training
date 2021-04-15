@@ -46,5 +46,11 @@
 // box.style.backgroundColor = "red";
 // console.log(box);
 
-let elems = document.getElementsByTagName("li");
-console.log(elems);
+// let elems = document.getElementsByTagName("li");
+// console.log(elems);
+
+
+let list = document.querySelector('.list');
+let secondListItem = list.lastElementChild;
+secondListItem.innerText = "CSS3";
+box.style.color = "red";
