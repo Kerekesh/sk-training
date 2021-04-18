@@ -130,23 +130,55 @@
 //   alert(user + 500); // hint: default -> 1500
 
 
-let user = {
-    name: "John",
-    money: 1000,
+// let user = {
+//     name: "John",
+//     money: 1000,
   
-    // для хинта равного "string"
-    toString() {
-      return `{name: "${this.name}"}`;
-    },
+//     // для хинта равного "string"
+//     toString() {
+//       return `{name: "${this.name}"}`;
+//     },
   
-    // для хинта равного "number" или "default"
-    valueOf() {
-      return this.money;
-    }
+//     // для хинта равного "number" или "default"
+//     valueOf() {
+//       return this.money;
+//     }
   
-  };
+//   };
   
 //   alert(user); // toString -> {name: "John"}
 //   alert(+user); // valueOf -> 1000
 //   alert(user + 500); // valueOf -> 1500
 
+
+let display = document.getElementById("display");
+let button = document.getElementById("button");
+let counter = document.getElementById("counter");
+
+let clicks = 0;
+
+let seconds = 5000;
+
+button.onclick = function() {
+    clicks++;
+    counter.innerText = clicks;
+
+    setInterval( function() {
+        button.onclick = null;
+        display.innerText = "Game Over";
+        clearTimeout(timer);
+    }, seconds);
+
+    timer = SetTimeout(function() {
+        display.innerText = 5000-100;
+    }, 100);
+}
+
+// const interval = setInterval(() => {
+//     const delta = Date.now() - startTime;
+//     display.textContent = formatTime(TIMEOUT) - delta;
+//   }, 100);
+
+// function formatTime(ms) {
+//     return Number.parseFloat(ms / 1000).toFixed(2);
+//   }

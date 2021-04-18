@@ -1,1 +1,90 @@
-.background{width:500px;height:500px;background-color:#f0f0f0}.background .my-round{width:150px;height:75px;background-color:#525252;-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);-webkit-transition:1s;-o-transition:1s;transition:1s}.background .my-round .my-circle{width:69px;height:69px;border:3px solid #9c9c9c;border-radius:50%;background-color:#fff}.dark{background-color:#474747}.dark .my-round{width:150px;height:75px}.dark .my-round .my-circle{width:69px;height:69px;border:3px solid #9c9c9c;border-radius:50%;background-color:#444;-webkit-transform:translateX(50px);-ms-transform:translateX(50px);transform:translateX(50px);-webkit-transition:1s;-o-transition:1s;transition:1s}
+/* .background{width:500px;height:500px;background-color:#f0f0f0}.background .my-round{width:150px;height:75px;background-color:#525252;-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);-webkit-transition:1s;-o-transition:1s;transition:1s}.background .my-round .my-circle{width:69px;height:69px;border:3px solid #9c9c9c;border-radius:50%;background-color:#fff}.dark{background-color:#474747}.dark .my-round{width:150px;height:75px}.dark .my-round .my-circle{width:69px;height:69px;border:3px solid #9c9c9c;border-radius:50%;background-color:#444;-webkit-transform:translateX(50px);-ms-transform:translateX(50px);transform:translateX(50px);-webkit-transition:1s;-o-transition:1s;transition:1s} */
+html {
+    font-family: 'Press Start 2P';
+    font-size: 2rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #222;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#button {
+    --color: firebrick;
+    --border-color: firebrick;
+    --shadow-color: rgb(112, 20, 20);
+
+    position: relative;
+    font-size: .75rem;
+    width: 200px;
+    height: 75px;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 2rem;
+    border: none;
+    background-size: cover;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    font-family: 'Press Start 2P', monospace;
+    font-weight: bold;
+    background-color: var(--color);
+    box-shadow: 0 -3px var(--color),
+                3px 0 var(--color),
+                0 3px var(--color),
+                -3px 0 var(--color),
+                0 -6px var(--border-color),
+                3px -3px var(--border-color),
+                6px 0 var(--border-color),
+                0 6px var(--border-color),
+                -3px 3px var(--border-color),
+                -6px 0 var(--border-color),
+                -3px -3px var(--border-color),
+                3px 3px var(--border-color),
+                0px 9px var(--shadow-color),
+                3px 6px var(--shadow-color),
+                6px 3px var(--shadow-color),
+                0px 9px var(--shadow-color),
+                -3px 6px var(--shadow-color),
+                -6px 3px var(--shadow-color);
+}
+
+#button:active {
+    top: 6px;
+	box-shadow: 0 -3px var(--color),
+                3px 0 var(--color),
+                0 3px var(--color),
+                -3px 0 var(--color),
+                0 -6px var(--border-color),
+                3px -3px var(--border-color),
+                6px 0 var(--border-color),
+                0 6px var(--border-color),
+                -3px 3px var(--border-color),
+                -6px 0 var(--border-color),
+                -3px -3px var(--border-color),
+                3px 3px var(--border-color),
+                0px 6px var(--shadow-color),
+                3px 3px var(--shadow-color),
+                6px 0px var(--shadow-color),
+                0px 6px var(--shadow-color),
+                -3px 3px var(--shadow-color),
+                -6px 0px var(--shadow-color);
+}
+
+#display,
+#counter {
+    height: 32px;
+}
