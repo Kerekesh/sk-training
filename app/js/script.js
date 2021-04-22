@@ -28,8 +28,6 @@
 
 // ● написать обработчик на событие клик чтобы элемент перемещался на
 // координаты клика
-// ● сделать dropdown (выпадающий список)
-
 
 // document.body.onclick = function(event) {
 //     let box = document.getElementById("box");
@@ -38,11 +36,37 @@
 // };
 
 
-dropdown.addEventListener("click", showItems, false);
-let toggle = document.querySelectorAll(".none");
+// ● сделать dropdown (выпадающий список)
 
-function showItems(e) {
-  for (let i = 0; i < toggle.length; i++) {
-    toggle[i].classList.toggle("none");
+// dropdown.addEventListener("click", showItems, false);
+// let toggle = document.querySelectorAll(".none");
+
+// function showItems(e) {
+//   for (let i = 0; i < toggle.length; i++) {
+//     toggle[i].classList.toggle("none");
+//   }
+// }
+
+
+// // ● подсвечивать ячейки таблицы при наведении
+
+// table.addEventListener("mouseover", highlightCell);
+// table.addEventListener("mouseout", removeHighlighting);
+
+// function highlightCell(event){
+//   if (event.target.tagName != "TD") return;
+
+//   event.target.style.backgroundColor = "lime";
+// }
+// function removeHighlighting(event){
+//   event.target.removeAttribute("style");
+// }
+
+window.addEventListener("scroll", toggleClass);
+
+function toggleClass(event){
+  console.log(this.scrollY);
+  if (this.scrollY > 200) {
+    header.classList.toggle("green");
   }
 }
