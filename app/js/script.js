@@ -1,3 +1,6 @@
+// Результатов на странице аватар своего профиля github
+// https://api.github.com/users/${user.name}
+
 const name = "https://api.github.com/users/kerekesh";
 
 $.ajax({
@@ -5,11 +8,11 @@ $.ajax({
   type: "GET",
   dataType: "json",
   success: function(res){
-    console.log(res);
+    console.log(res.avatar_url);
     for (const key in res) {
       $('#result').append(`<tr><td>${key}</td></tr>`);
     }
-    // $('#result').append(`<div>${res.avatar_url}</div>`);
+    $('#result').append(`<img src="${res.avatar_url}">`);
     // $('#result').append(`<div>${JSON.stringify(res)}</div>`);
   }
 });
