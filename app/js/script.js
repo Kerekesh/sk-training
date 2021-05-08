@@ -1,21 +1,21 @@
 // Результатов на странице аватар своего профиля github
 // https://api.github.com/users/${user.name}
 
-const name = "https://api.github.com/users/kerekesh";
+// const name = "https://api.github.com/users/kerekesh";
 
-$.ajax({
-  url: name,
-  type: "GET",
-  dataType: "json",
-  success: function(res){
-    console.log(res.avatar_url);
-    for (const key in res) {
-      $('#result').append(`<tr><td>${key}</td></tr>`);
-    }
-    $('#result').append(`<img src="${res.avatar_url}">`);
-    // $('#result').append(`<div>${JSON.stringify(res)}</div>`);
-  }
-});
+// $.ajax({
+//   url: name,
+//   type: "GET",
+//   dataType: "json",
+//   success: function(res){
+//     console.log(res.avatar_url);
+//     for (const key in res) {
+//       $('#result').append(`<tr><td>${key}</td></tr>`);
+//     }
+//     $('#result').append(`<img src="${res.avatar_url}">`);
+//     // $('#result').append(`<div>${JSON.stringify(res)}</div>`);
+//   }
+// });
 
 // console.log("start");
 
@@ -89,3 +89,61 @@ $.ajax({
 // // fetch('https://jsonplaceholder.typicode.com/todos/1')
 // //   .then(response => response.json())
 // //   .then(json => console.log(json))
+
+
+// function delay(ms) {
+//   return new Promise(function (resolve) {
+//     setTimeout(resolve, ms)
+//   });
+// }
+// delay(3000).then(() => alert('выполнилось через 3 секунды'));
+
+
+
+// new Promise(function(resolve, reject) {
+
+//   setTimeout(() => resolve(1), 1000);
+
+// }).then(function(result) {
+
+//   alert(result); // 1
+
+//   return new Promise((resolve, reject) => { // (*)
+//     setTimeout(() => resolve(result * 2), 1000);
+//   });
+
+// }).then(function(result) { // (**)
+
+//   alert(result); // 2
+
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => resolve(result * 2), 1000);
+//   });
+
+// }).then(function(result) {
+
+//   alert(result); // 4
+
+// });
+
+
+function loadScript(src) {
+  return new Promise(function(resolve, reject) {
+    let script = document.createElement('script');
+    script.src = src;
+
+    script.onload = () => resolve(script);
+    script.onerror = () => reject(new Error(`Ошибка загрузки скрипта ${src}`));
+
+    document.head.append(script);
+  });
+};
+  loadScript("https://learn.javascript.ru/article/promise-chaining/one.js")
+  .then(script => loadScript("https://learn.javascript.ru/article/promise-chaining/two.js"))
+  .then(script => loadScript("https://learn.javascript.ru/article/promise-chaining/three.js"))
+  .then(script => {
+    // скрипты загружены, мы можем использовать объявленные в них функции
+    one();
+    two();
+    three();
+  });
