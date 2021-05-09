@@ -1,3 +1,21 @@
+let buttons = document.querySelectorAll("#buttonContainer button");
+
+buttons.forEach(button => {
+  button.addEventListener("click", function(event) {
+    let operator = this.innerText,
+        num1 = n1.value, 
+        num2 = n2.value;
+    result.innerHTML = eval(num1 + operator + num2); // eval is evil =)
+  });
+});
+
+
+
+
+
+
+
+
 // let numbers = document.getElementsByClassName("number");
 // let result = 0;
 
@@ -29,31 +47,6 @@
 //   console.log(display.innerHTML);
 //   display.innerHTML = Number(display.innerHTML);
 // }
-
-let buttons = document.querySelectorAll("#buttonContainer button");
-
-buttons.forEach(element => {
-  element.addEventListener("click", function(event) {
-
-    function getEl(id) {
-      let val = id.value;
-      return val;
-    } 
-  
-    let operator = this.innerText;
-    
-    let num1 = getEl(n1); 
-    num1 = parseInt(num1);
-    let num2 = getEl(n2);
-    num2 = parseInt(num2);
-  
-    result.innerHTML = eval(num1 + operator + num2);
-    
-  });
-});
-
-
-
 
 
 
