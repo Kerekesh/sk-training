@@ -1,13 +1,40 @@
-let buttons = document.querySelectorAll("#buttonContainer button");
+const buttons = document.querySelectorAll(".button");
+const display = document.querySelector(".value");
 
 buttons.forEach(button => {
-  button.addEventListener("click", function(event) {
-    let operator = this.innerText,
-        num1 = n1.value, 
-        num2 = n2.value;
-    result.innerHTML = eval(num1 + operator + num2); // eval is evil =)
-  });
+    button.addEventListener("click", getValue);
 });
+
+function getValue(e) {
+    if (e.target.innerHTML === 'AC') {
+        display.innerHTML = '0';
+    } else if (e.target.innerHTML === '=') {
+        display.innerHTML = eval(display.innerHTML);
+    } else if (display.innerHTML === '0') {
+        display.innerHTML = e.target.innerHTML;
+    } else if (e.target.innerHTML === '%') {
+        display.innerHTML = eval(display.innerHTML / 100 );
+    } else if (e.target.innerHTML === '±') {
+        num = parseInt(display.innerHTML);
+        if(num > 0){    
+            display.prepend("-");
+         }
+         else if(num < 0){
+             display.innerText.replace('-', '');
+         }
+         else if(num == 0){
+            display.innerHTML;
+         } 
+    }else {
+        display.innerHTML += e.target.innerHTML;
+    }
+};
+
+
+
+
+
+
 
 
 
@@ -47,10 +74,3 @@ buttons.forEach(button => {
 //   console.log(display.innerHTML);
 //   display.innerHTML = Number(display.innerHTML);
 // }
-
-
-
-
-
-
-
