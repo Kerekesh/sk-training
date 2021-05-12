@@ -12,7 +12,22 @@ const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
 // Подключаем модуль del
 const del = require('del');
+// Подключаем gulp-concat к gulpfiles.js
+// const concat = require('gulp-concat');
+// Подключаем gulp-uglify-es
+const uglify = require('gulp-uglify-es').default;
 
+function scripts() {
+    return src([
+        'node_modules/jquery/dist/jquery.min.js',
+        'app/js/script.js',
+    ])
+    .pipe(concat('script.min.js'))
+    .pipe(uglify())
+    .pipe(dest('app/js/'))
+    .pipe(browserSync.stream())
+    }
+    exports.scripts = scripts;
 
 function browsersync() {
         browserSync.init({ 
@@ -25,6 +40,7 @@ function browsersync() {
         watch('app/**/*.scss', styles);
         watch('app/**/*.html').on('change', browserSync.reload);
         watch('app/images/src/**/*', images);
+        watch(['app/**/*.js', '!app/**/*.min.js'], scripts);
     }
 
 
@@ -54,6 +70,7 @@ function buildcopy(){
     return src([
         'app/images/dest/**/*',
         'app/css/*.min.css',
+        'app/js/*.min.js',
         'app/**/*.html',
     ], { base: 'app' })
     .pipe(dest('dist'))
@@ -63,7 +80,8 @@ function buildcopy(){
     exports.images = images;
 	exports.styles = styles;
     exports.browsersync = browsersync;
+    exports.scripts = scripts;
     // exports.cleandist = cleandist;
 
-    exports.build = series(cleandist, cleanimg, styles, images, buildcopy);
+    exports.build = series(cleandist, cleanimg, styles, scripts, images, buildcopy);
     exports.default = parallel(browsersync, startWatch);
